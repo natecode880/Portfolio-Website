@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nathan Delaportas — Quant Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="jukebox-widget" class="mini"></div>
+
+<div class="titlebar">
+  <div class="titlebar-top">
+    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+    <span class="titlebar-path">nathan-delaportas — portfolio — ~/site</span>
+    <nav class="page-nav">
+      <a href="index.html" data-page="home">home</a>
+      <a href="projects.html" data-page="projects">projects</a>
+      <a href="music.html" data-page="music">music</a>
+    </nav>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button class="tab" data-target="about">about<span class="dim">.py</span></button>
+    <button class="tab" data-target="education">education<span class="dim">.md</span></button>
+    <button class="tab" data-target="experience">experience<span class="dim">.log</span></button>
+    <button class="tab" data-target="projects">projects<span class="dim">/</span></button>
+    <button class="tab" data-target="skills">skills<span class="dim">.yaml</span></button>
+    <button class="tab" data-target="contact">contact<span class="dim">.sh</span></button>
+  </nav>
+</div>
+
+<main id="page-content" data-page="home">
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <div class="term">
+      <div class="term-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="term-title">zsh — nathan@nd</span>
+      </div>
+      <div class="term-body" id="termBody"></div>
+    </div>
+
+    <div class="hero-heading">
+      <h1 class="hero-name">Nathan <span class="accent">Delaportas</span></h1>
+      <p class="hero-tag">Final-year MEng Computer Science student (First Class) at Surrey, progressing to an MSc in Computational Finance at King's College London. I've built execution algorithms, market-making simulations and ML-driven fintech tools, and I'm currently a Machine Learning Engineering Intern at Synk. Looking for graduate/intern roles in quant dev, trading, SWE and AI/ML engineering.</p>
+      <div class="hero-links">
+        <a class="pill" href="mailto:delaportasnathan@gmail.com"><span class="sw">✉</span> Email</a>
+        <a class="pill" href="https://github.com/natecode880" target="_blank" rel="noopener">
+          <svg class="sw" width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38l-.01-1.49c-2.22.48-2.69-1.07-2.69-1.07-.36-.92-.89-1.16-.89-1.16-.72-.5.06-.49.06-.49.8.06 1.22.82 1.22.82.71 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+        <a class="pill" href="https://www.linkedin.com/in/nathan-delaportas1/" target="_blank" rel="noopener">
+          <svg class="sw" width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.15C0 .52.53 0 1.19 0h13.62C15.47 0 16 .52 16 1.15v13.7c0 .63-.53 1.15-1.19 1.15H1.19C.53 16 0 15.48 0 14.85V1.15zM4.75 13.4V6.13H2.4v7.27h2.35zm-1.17-8.26c.82 0 1.33-.55 1.33-1.23-.02-.7-.51-1.23-1.31-1.23-.8 0-1.33.54-1.33 1.23 0 .68.51 1.23 1.3 1.23h.01zM13.6 13.4V9.35c0-2.17-1.16-3.18-2.71-3.18-1.25 0-1.8.7-2.11 1.18v-1.02H6.42c.03.66 0 7.07 0 7.07h2.36V9.35c0-.2.01-.4.07-.55.16-.4.53-.82 1.14-.82.8 0 1.13.61 1.13 1.51v3.91h2.48z"/></svg>
+          LinkedIn
+        </a>
+        <span class="pill" style="border-style:dashed; cursor:default;">📍 London, UK</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap fade-in">
+    <div class="file-head">
+      <span class="fname">about.py</span>
+      <span class="rule"></span>
+      <span class="fmeta">UTF-8 · Python</span>
+    </div>
+
+    <div class="about-code">
+<div class="code-line" data-line="1"><span class="kw">class</span> <span class="fn">Nathan</span>:</div>
+<div class="code-line" data-line="2" style="padding-left:54px;"><span class="str">"""</span></div>
+<div class="code-line" data-line="3" style="padding-left:54px;"><span class="cmt"># EDUCATION</span></div>
+<div class="code-line" data-line="4" style="padding-left:54px;"><span class="bul">•</span> MEng Computer Science, First Class Honours — University of</div>
+<div class="code-line" data-line="5" style="padding-left:68px;">Surrey (2022–2026). Dissertation: Quidly (see below), R² = 0.946,</div>
+<div class="code-line" data-line="6" style="padding-left:68px;">80% mark.</div>
+<div class="code-line" data-line="7" style="padding-left:54px;"><span class="bul">•</span> MSc Computational Finance — King's College London (2026–2027),</div>
+<div class="code-line" data-line="8" style="padding-left:68px;">covering statistics in finance, C++ for financial mathematics,</div>
+<div class="code-line" data-line="9" style="padding-left:68px;">machine learning and high-frequency finance.</div>
+<div class="code-line" data-line="10" style="padding-left:54px;">&nbsp;</div>
+<div class="code-line" data-line="11" style="padding-left:54px;"><span class="cmt"># PROJECTS &amp; EXPERIENCE</span></div>
+<div class="code-line" data-line="12" style="padding-left:54px;"><span class="bul">•</span> Quidly — a full-stack fintech app (React Native, Django,</div>
+<div class="code-line" data-line="13" style="padding-left:68px;">PostgreSQL) built around a set of ML models (Random Forest,</div>
+<div class="code-line" data-line="14" style="padding-left:68px;">Gradient Boosting, ARIMA-LSTM) that read a user's transaction</div>
+<div class="code-line" data-line="15" style="padding-left:68px;">history, forecast their cash flow, and flag debt risk before it</div>
+<div class="code-line" data-line="16" style="padding-left:68px;">becomes a problem. It turns those predictions into personalised,</div>
+<div class="code-line" data-line="17" style="padding-left:68px;">plain-language recommendations that help people pay down debt,</div>
+<div class="code-line" data-line="18" style="padding-left:68px;">build savings and budget safely — R² = 0.946 on 1,200+ synthetic</div>
+<div class="code-line" data-line="19" style="padding-left:68px;">transactions across multiple personas.</div>
+<div class="code-line" data-line="20" style="padding-left:54px;"><span class="bul">•</span> Machine Learning Engineering Intern @ Synk.</div>
+<div class="code-line" data-line="21" style="padding-left:54px;"><span class="bul">•</span> Optimal Execution &amp; Algorithmic Trading — an Almgren–Chriss</div>
+<div class="code-line" data-line="22" style="padding-left:68px;">execution framework benchmarking RL policies against TWAP/VWAP.</div>
+<div class="code-line" data-line="23" style="padding-left:54px;"><span class="bul">•</span> Electronic Market Making &amp; LOB Simulation — a Hawkes-process</div>
+<div class="code-line" data-line="24" style="padding-left:68px;">limit order book simulator with an inventory-aware strategy.</div>
+<div class="code-line" data-line="25" style="padding-left:54px;"><span class="bul">•</span> AI Data Centre Investment &amp; Risk Analysis — a DCF model that</div>
+<div class="code-line" data-line="26" style="padding-left:68px;">won 3rd Prize from AtkinsRéalis.</div>
+<div class="code-line" data-line="27" style="padding-left:54px;"><span class="bul">•</span> Data Analyst Intern — NHR Automotive.</div>
+<div class="code-line" data-line="28" style="padding-left:54px;"><span class="bul">•</span> Advanced Algorithms Peer Support Leader &amp; CS Society Treasurer</div>
+<div class="code-line" data-line="29" style="padding-left:68px;">— University of Surrey.</div>
+<div class="code-line" data-line="30" style="padding-left:54px;"><span class="bul">•</span> A-Level maths tutor to 120+ students; technology volunteer at</div>
+<div class="code-line" data-line="31" style="padding-left:68px;">Unlock Your Potential.</div>
+<div class="code-line" data-line="32" style="padding-left:54px;">&nbsp;</div>
+<div class="code-line" data-line="33" style="padding-left:54px;"><span class="cmt"># AMBITIONS</span></div>
+<div class="code-line" data-line="34" style="padding-left:54px;"><span class="bul">•</span> Seeking internships and graduate roles as a Quantitative</div>
+<div class="code-line" data-line="35" style="padding-left:68px;">Developer, Quantitative Trader, Software Engineer or AI/ML</div>
+<div class="code-line" data-line="36" style="padding-left:68px;">Engineer.</div>
+<div class="code-line" data-line="37" style="padding-left:54px;"><span class="bul">•</span> Academically: mastering the mathematics and computing that</div>
+<div class="code-line" data-line="38" style="padding-left:68px;">sit underneath modern financial markets.</div>
+<div class="code-line" data-line="39" style="padding-left:54px;">&nbsp;</div>
+<div class="code-line" data-line="40" style="padding-left:54px;"><span class="cmt"># OUTSIDE OF WORK</span></div>
+<div class="code-line" data-line="41" style="padding-left:54px;"><span class="bul">•</span> Football, chess, piano, the gym and swimming.</div>
+<div class="code-line" data-line="42" style="padding-left:54px;"><span class="bul">•</span> Formula 1 and travelling.</div>
+<div class="code-line" data-line="43" style="padding-left:54px;"><span class="bul">•</span> Keeping half an eye on financial markets, even off the clock.</div>
+<div class="code-line" data-line="44" style="padding-left:54px;"><span class="str">"""</span></div>
+<div class="code-line" data-line="45" style="padding-left:34px;">&nbsp;</div>
+<div class="code-line" data-line="46" style="padding-left:34px;">based_in = <span class="str">"London, UK"</span></div>
+<div class="code-line" data-line="47" style="padding-left:34px;">focus = [<span class="str">"Quantitative Trading"</span>, <span class="str">"Quantitative Development"</span>, <span class="str">"Software Engineering"</span>, <span class="str">"AI Engineering"</span>]</div>
+<div class="code-line" data-line="48" style="padding-left:34px;">status = <span class="str">"open to summer / graduate roles in FinTech"</span></div>
+    </div>
+
+    <div class="about-meta">
+      <span><b>Education</b> Surrey (MEng, First Class) → King's College London (MSc)</span>
+      <span><b>Focus</b> Quant Dev · Quant Trading · Software Eng · AI Eng</span>
+      <span><b>Stack</b> Python · C++ · R · SQL</span>
+      <span><b>Interests</b> Football · Chess · Piano · F1 · Travel · Markets</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education">
+  <div class="wrap fade-in">
+    <div class="file-head">
+      <span class="fname">education.md</span>
+      <span class="rule"></span>
+      <span class="fmeta">Markdown</span>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-top">
+        <span class="edu-h">## King's College London</span>
+        <span class="edu-when">Sep 2026 – Aug 2027</span>
+      </div>
+      <div class="edu-sub">MSc Computational Finance — London, UK</div>
+      <div class="mod-line"><span class="kw">core:</span> Individual Project, Scientific Computing for Finance, Quantitative Methods in Finance, Case Studies in Finance, Agent-Based Modelling in Finance, High-Frequency Finance</div>
+      <div class="mod-line"><span class="kw">electives:</span> Statistics in Finance, C++ for Financial Mathematics, Machine Learning</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-top">
+        <span class="edu-h">## University of Surrey</span>
+        <span class="edu-when">Sep 2022 – Jul 2026</span>
+      </div>
+      <div class="edu-sub">MEng Computer Science — First Class Honours — Guildford, UK</div>
+      <ul class="edu-list">
+        <li>Dissertation: <b style="color:var(--text)">Quidly</b> — an ML-powered app (Random Forest, Gradient Boosting, ARIMA-LSTM) that forecasts cash flow and flags debt risk, then recommends how to pay down debt, save and budget safely. R² = 0.946, 80% mark (First Class).</li>
+        <li>Computer Science Society Treasurer — coordinated technical events, hackathons and employer networking sessions.</li>
+        <li>Co-developed an accessible hybrid-work platform in a 6-person team, placing 6th at the Green Tech Jam.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap fade-in">
+    <div class="file-head">
+      <span class="fname">experience.log</span>
+      <span class="rule"></span>
+      <span class="fmeta">git log --reverse=false</span>
+    </div>
+
+    <div id="gitlog"></div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="wrap fade-in">
+    <div class="file-head">
+      <span class="fname">projects/</span>
+      <span class="rule"></span>
+      <span class="fmeta">7 featured · <a href="projects.html" style="color:var(--green);">view all 16 →</a></span>
+    </div>
+
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Systematic WTI Crude Oil Trading Strategy</span>
+          <span class="proj-date">Jan – Mar 2026</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">ARIMAX</span><span class="tag">Technical Signals</span><span class="tag">Risk Management</span>
+        </div>
+        <p class="proj-desc">Independent research project building a hybrid macro–technical trading framework for WTI crude oil, combining ARIMAX time-series modelling with technical signals and risk controls. Applied walk-forward validation, volatility targeting and regime-based filtering to study strategy behaviour under real market uncertainty.</p>
+        <div class="proj-out"><span class="g">$ python backtest.py --market=wti</span><br>status: ongoing research, refined as understanding develops</div>
+        <div class="proj-link-row">
+          <a class="repo-link" href="https://github.com/natecode880/wti-oil-trading" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38l-.01-1.49c-2.22.48-2.69-1.07-2.69-1.07-.36-.92-.89-1.16-.89-1.16-.72-.5.06-.49.06-.49.8.06 1.22.82 1.22.82.71 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Optimal Execution &amp; Algorithmic Trading</span>
+          <span class="proj-date">May 2026</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Almgren–Chriss</span><span class="tag">RL</span><span class="tag">Stochastic Control</span>
+        </div>
+        <p class="proj-desc">Built and backtested an optimal execution framework using the Almgren–Chriss model, minimising transaction costs under market impact while controlling inventory risk. Formulated execution as a constrained MDP and benchmarked RL policies against analytical schedules.</p>
+        <div class="proj-out"><span class="g">$ python backtest.py --strategy=rl</span><br>benchmark: RL policy vs TWAP / VWAP ✓</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Electronic Market Making &amp; LOB Simulation</span>
+          <span class="proj-date">Apr 2026</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Hawkes Processes</span><span class="tag">Microstructure</span>
+        </div>
+        <p class="proj-desc">Built a queue-reactive limit order book simulator using Hawkes processes to model clustered order arrivals and cancellations. Developed an inventory-aware market-making strategy incorporating latency, adverse selection and risk limits.</p>
+        <div class="proj-out"><span class="g">$ python simulate.py --engine=lob</span><br>tracking: spread capture · inventory · P&amp;L attribution</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Quidly — Financial Stability Tracker</span>
+          <span class="proj-date">Oct 2024 – May 2025</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">React Native</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">scikit-learn</span>
+        </div>
+        <p class="proj-desc">Final-year dissertation: a full-stack fintech app (React Native + Django) that uses ML — Random Forest, Gradient Boosting and ARIMA-LSTM — to forecast cash flow and flag debt risk early, then turns that into personalised recommendations that help users pay down debt, build savings and budget safely.</p>
+        <div class="proj-out"><span class="g">$ python evaluate.py --model=ensemble</span><br>R² = 0.946 on 1,200+ synthetic transactions · grade: 80% (First Class)</div>
+        <div class="proj-link-row">
+          <a class="repo-link" href="https://github.com/natecode880/Quidly" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38l-.01-1.49c-2.22.48-2.69-1.07-2.69-1.07-.36-.92-.89-1.16-.89-1.16-.72-.5.06-.49.06-.49.8.06 1.22.82 1.22.82.71 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">AI Data Centre Investment &amp; Risk Analysis</span>
+          <span class="proj-date">Oct 2025 – Jan 2026</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">DCF Modelling</span><span class="tag">Scenario Analysis</span><span class="tag">Sensitivity Analysis</span>
+        </div>
+        <p class="proj-desc">Led the financial analysis workstream in a multidisciplinary team evaluating a large-scale AI data centre. Built a DCF model incorporating capex, opex, energy prices and utilisation, then stress-tested it against changing market conditions.</p>
+        <div class="proj-out"><span class="g">$ ./present_findings.sh</span><br>result: 3rd Prize — awarded by AtkinsRéalis</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Credit Card Fraud Detection Engine</span>
+          <span class="proj-date">Apr 2025</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">C++</span><span class="tag">STL</span><span class="tag">Multithreading</span>
+        </div>
+        <p class="proj-desc">Independent project: a low-latency fraud detection engine analysing transaction streams for anomalous patterns. Implemented multithreaded ingestion pipelines for large-scale processing, applying clustering and regression techniques.</p>
+        <div class="proj-out"><span class="g">$ ./fraud_engine --stream=kaggle_txn</span><br>ingest: multithreaded · low-latency</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">WorkFox — Hybrid Workplace Engagement Platform</span>
+          <span class="proj-date">Feb – May 2024</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Django</span><span class="tag">JavaScript</span><span class="tag">PostgreSQL</span><span class="tag">REST</span>
+        </div>
+        <p class="proj-desc">Tech Lead, Backend Developer and PM for a 6-person Agile team. Built GDPR-compliant authentication, a mood check-in system for tracking employee wellbeing, and a Pomodoro timer, integrating OpenWeather and TomTom Traffic APIs for contextual insights.</p>
+        <div class="proj-out"><span class="g">$ ./run_tests.sh --suite=all</span><br>all tests passing · grade: 73% (First Class)</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:24px; display:flex;">
+      <a class="btn ghost" href="projects.html">View all 16 projects →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="wrap fade-in">
+    <div class="file-head">
+      <span class="fname">skills.yaml</span>
+      <span class="rule"></span>
+      <span class="fmeta">YAML</span>
+    </div>
+
+    <div class="yaml-block">
+      <div class="yaml-row"><span class="yaml-key">languages:</span></div>
+      <div class="chip-row">
+        <span class="chip">Python</span><span class="chip">C++</span><span class="chip">Java</span><span class="chip">R</span><span class="chip">SQL</span><span class="chip">JavaScript</span><span class="chip">MATLAB</span>
+      </div>
+
+      <div class="yaml-row"><span class="yaml-key">quant_finance:</span></div>
+      <div class="chip-row">
+        <span class="chip">Algorithmic Trading</span><span class="chip">Backtesting</span><span class="chip">Market Microstructure</span><span class="chip">Financial Modelling</span><span class="chip">Risk Analysis</span><span class="chip">Reinforcement Learning</span>
+      </div>
+
+      <div class="yaml-row"><span class="yaml-key">data_and_ml:</span></div>
+      <div class="chip-row">
+        <span class="chip">TensorFlow</span><span class="chip">scikit-learn</span><span class="chip">pandas</span><span class="chip">NumPy</span><span class="chip">Regression</span><span class="chip">Classification</span><span class="chip">Neural Networks</span>
+      </div>
+
+      <div class="yaml-row"><span class="yaml-key">web_and_backend:</span></div>
+      <div class="chip-row">
+        <span class="chip">Django</span><span class="chip">React Native</span><span class="chip">REST APIs</span><span class="chip">PostgreSQL</span><span class="chip">MySQL</span>
+      </div>
+
+      <div class="yaml-row"><span class="yaml-key">tools:</span></div>
+      <div class="chip-row">
+        <span class="chip">Git</span><span class="chip">Linux</span><span class="chip">Docker</span><span class="chip">Jupyter</span><span class="chip">AWS</span><span class="chip">Google Cloud</span><span class="chip">Tableau</span><span class="chip">Excel (Advanced)</span>
+      </div>
+    </div>
+
+    <ul class="cert-list">
+      <li><span class="ok">✓</span> J.P. Morgan — Quantitative Research Virtual Experience Programme</li>
+      <li><span class="ok">✓</span> J.P. Morgan — Software Engineering Virtual Experience Programme</li>
+      <li><span class="ok">✓</span> Citi — Markets Quantitative Analysis (MQA) Virtual Experience</li>
+      <li><span class="ok">✓</span> Deloitte — Data Analytics Virtual Experience</li>
+      <li><span class="ok">✓</span> Google Cloud — Data Analytics Certificate</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap fade-in">
+    <div class="file-head">
+      <span class="fname">contact.sh</span>
+      <span class="rule"></span>
+      <span class="fmeta">Shell</span>
+    </div>
+
+    <div class="term" style="max-width:560px;">
+      <div class="term-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="term-title">contact.sh</span>
+      </div>
+      <div class="term-body contact-term">
+        <div class="term-line"><span class="comment">#!/bin/bash</span></div>
+        <div class="term-line">&nbsp;</div>
+        <div class="term-line"><span class="sh">echo</span> "Email:    <a href="mailto:delaportasnathan@gmail.com">delaportasnathan@gmail.com</a>"</div>
+        <div class="term-line"><span class="sh">echo</span> "GitHub:   <a href="https://github.com/natecode880" target="_blank" rel="noopener">github.com/natecode880</a>"</div>
+        <div class="term-line"><span class="sh">echo</span> "LinkedIn: <a href="https://www.linkedin.com/in/nathan-delaportas1/" target="_blank" rel="noopener">linkedin.com/in/nathan-delaportas1</a>"</div>
+        <div class="term-line"><span class="sh">echo</span> "Location: London, UK"</div>
+        <div class="term-line">&nbsp;</div>
+        <div class="term-line"><span class="prompt">$</span> ./get_in_touch.sh --role="quant developer" --status="open to opportunities"<span class="caret"></span></div>
+      </div>
+    </div>
+
+    <div class="contact-btns">
+      <a class="btn" href="mailto:delaportasnathan@gmail.com">✉ Say hello</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/nathan-delaportas1/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/natecode880" target="_blank" rel="noopener">View GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>you made it this far — thank you. <span style="color:var(--green);">— nd</span><br>Nathan Delaportas © 2026</footer>
+
+</main>
+
+<script src="home.js"></script>
+<script src="projects.js"></script>
+<script src="jukebox.js"></script>
+
+</body>
+</html>

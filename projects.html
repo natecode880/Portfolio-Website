@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Projects — Nathan Delaportas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .cat-tabs{
+    display:flex; overflow-x:auto; gap:0; margin-bottom:32px;
+    border:1px solid var(--border); border-radius:8px; overflow:hidden;
+    background:var(--bg-panel);
+  }
+  .cat-tab{
+    flex:0 0 auto; padding:11px 18px; font-size:12.5px; color:var(--text-dim);
+    border-right:1px solid var(--border-soft); cursor:pointer; background:transparent;
+    white-space:nowrap; transition:color .15s ease, background .15s ease;
+    font-family:var(--mono);
+  }
+  .cat-tab:last-child{ border-right:none; }
+  .cat-tab:hover{ color:var(--text); background:var(--bg-elevated); }
+  .cat-tab.active{ color:var(--green); background:var(--bg-elevated); }
+  .cat-tab .count{ color:var(--text-faint); }
+  .cat-tab.active .count{ color:var(--green-dim); }
+
+  .cat-panel{ display:none; }
+  .cat-panel.active{ display:block; }
+
+  .back-link{
+    display:inline-flex; align-items:center; gap:6px; color:var(--text-dim);
+    font-size:12.5px; margin-bottom:28px;
+  }
+  .back-link:hover{ color:var(--green); text-decoration:none; }
+
+  .page-title{ font-size:clamp(22px,4vw,30px); font-weight:800; margin:0 0 6px; letter-spacing:-0.3px; }
+  .page-sub{ color:var(--text-dim); font-size:13.5px; margin:0 0 32px; max-width:65ch; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation:none !important; transition:none !important; }
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+<div id="jukebox-widget" class="mini"></div>
+
+<div class="titlebar">
+  <div class="titlebar-top">
+    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+    <span class="titlebar-path">nathan-delaportas — portfolio — ~/site/projects</span>
+    <nav class="page-nav">
+      <a href="index.html" data-page="home">home</a>
+      <a href="projects.html" data-page="projects">projects</a>
+      <a href="music.html" data-page="music">music</a>
+    </nav>
+  </div>
+</div>
+
+<main id="page-content" data-page="projects">
+<div class="wrap" style="padding-top:56px; padding-bottom:80px;">
+
+  <a class="back-link" href="index.html">← back to portfolio</a>
+
+  <div class="file-head" style="margin-bottom:10px;">
+    <span class="fname">projects/</span>
+    <span class="rule"></span>
+    <span class="fmeta">16 items</span>
+  </div>
+  <h1 class="page-title">Everything I've built</h1>
+  <p class="page-sub">From quant research and fintech ML to first-year coursework in ARM assembly — the full list, grouped by area. Projects with a public repo link straight to GitHub; the rest are marked ongoing / repo not yet public.</p>
+
+  <nav class="cat-tabs" id="catTabs">
+    <button class="cat-tab active" data-cat="quant">Quant &amp; Trading <span class="count">(4)</span></button>
+    <button class="cat-tab" data-cat="aiml">AI / ML &amp; Data <span class="count">(2)</span></button>
+    <button class="cat-tab" data-cat="fullstack">Full-Stack &amp; Web <span class="count">(5)</span></button>
+    <button class="cat-tab" data-cat="systems">Systems &amp; Low-Level <span class="count">(4)</span></button>
+    <button class="cat-tab" data-cat="automation">Automation &amp; Tools <span class="count">(1)</span></button>
+  </nav>
+
+
+  <!-- ================= QUANT & TRADING ================= -->
+  <div class="cat-panel active" id="panel-quant">
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Systematic WTI Crude Oil Trading Strategy</span>
+          <span class="proj-date">Jan – Mar 2026</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">ARIMAX</span><span class="tag">Technical Signals</span><span class="tag">Risk Management</span>
+        </div>
+        <p class="proj-desc">Independent research project building a hybrid macro–technical trading framework for WTI crude oil, combining ARIMAX time-series modelling with technical signals and risk controls. Applied walk-forward validation, volatility targeting and regime-based filtering to study strategy behaviour under real market uncertainty — an ongoing project, refined as understanding develops.</p>
+        <div class="proj-out"><span class="g">$ python backtest.py --market=wti</span><br>status: ongoing research project</div>
+        <div class="proj-link-row">
+          <a class="repo-link" href="https://github.com/natecode880/wti-oil-trading" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38l-.01-1.49c-2.22.48-2.69-1.07-2.69-1.07-.36-.92-.89-1.16-.89-1.16-.72-.5.06-.49.06-.49.8.06 1.22.82 1.22.82.71 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Optimal Execution &amp; Algorithmic Trading</span>
+          <span class="proj-date">May 2026</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Almgren–Chriss</span><span class="tag">RL</span><span class="tag">Stochastic Control</span>
+        </div>
+        <p class="proj-desc">Built and backtested an optimal execution framework using the Almgren–Chriss model, minimising transaction costs under market impact while controlling inventory risk. Formulated execution as a constrained MDP and benchmarked RL policies against analytical schedules.</p>
+        <div class="proj-out"><span class="g">$ python backtest.py --strategy=rl</span><br>benchmark: RL policy vs TWAP / VWAP ✓</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Electronic Market Making &amp; LOB Simulation</span>
+          <span class="proj-date">Apr 2026</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Hawkes Processes</span><span class="tag">Microstructure</span>
+        </div>
+        <p class="proj-desc">Built a queue-reactive limit order book simulator using Hawkes processes to model clustered order arrivals and cancellations. Developed an inventory-aware market-making strategy incorporating latency, adverse selection and risk limits.</p>
+        <div class="proj-out"><span class="g">$ python simulate.py --engine=lob</span><br>tracking: spread capture · inventory · P&amp;L attribution</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">AI Data Centre Investment &amp; Risk Analysis</span>
+          <span class="proj-date">Oct 2025 – Jan 2026</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">DCF Modelling</span><span class="tag">Scenario Analysis</span><span class="tag">Sensitivity Analysis</span>
+        </div>
+        <p class="proj-desc">Led the financial analysis workstream in a multidisciplinary team evaluating a large-scale AI data centre. Built a DCF model incorporating capex, opex, energy prices and utilisation, then stress-tested it against changing market conditions.</p>
+        <div class="proj-out"><span class="g">$ ./present_findings.sh</span><br>result: 3rd Prize — awarded by AtkinsRéalis</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= AI / ML & DATA ================= -->
+  <div class="cat-panel" id="panel-aiml">
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Quidly — Financial Stability Tracker</span>
+          <span class="proj-date">Nov 2024 – Jun 2025</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">React Native</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">scikit-learn</span>
+        </div>
+        <p class="proj-desc">Final-year dissertation: a full-stack fintech app (React Native + Django) that uses ML — Random Forest, Gradient Boosting and ARIMA-LSTM — to forecast cash flow and flag debt risk early, then turns that into personalised recommendations that help users pay down debt, build savings and budget safely.</p>
+        <div class="proj-out"><span class="g">$ python evaluate.py --model=ensemble</span><br>R² = 0.946 on 1,200+ synthetic transactions · grade: 80% (First Class)</div>
+        <div class="proj-link-row">
+          <a class="repo-link" href="https://github.com/natecode880/Quidly" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38l-.01-1.49c-2.22.48-2.69-1.07-2.69-1.07-.36-.92-.89-1.16-.89-1.16-.72-.5.06-.49.06-.49.8.06 1.22.82 1.22.82.71 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">AI-Based Breast Ultrasound Image Classification</span>
+          <span class="proj-date">Mar – May 2024</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">ResNet-18</span><span class="tag">Medical Imaging</span>
+        </div>
+        <p class="proj-desc">AI coursework: a deep learning model classifying breast ultrasound images as benign or malignant, using a ResNet-18 architecture on the BreastMNIST dataset with hyperparameter tuning, early stopping, data augmentation and 5-fold cross-validation.</p>
+        <div class="proj-out"><span class="g">$ python train.py --model=resnet18</span><br>AUC 0.901 (baseline 0.863) · grade: 92%</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= FULL-STACK & WEB ================= -->
+  <div class="cat-panel" id="panel-fullstack">
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">WorkFox — Hybrid Workplace Engagement Platform</span>
+          <span class="proj-date">Feb – May 2024</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Django</span><span class="tag">JavaScript</span><span class="tag">PostgreSQL</span><span class="tag">REST</span>
+        </div>
+        <p class="proj-desc">Tech Lead, Backend Developer and PM for a 6-person Agile team. Built GDPR-compliant authentication, a mood check-in system for tracking employee wellbeing, and a Pomodoro timer, integrating OpenWeather and TomTom Traffic APIs for contextual insights.</p>
+        <div class="proj-out"><span class="g">$ ./run_tests.sh --suite=all</span><br>all tests passing · grade: 73% (First Class)</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Music Catalogue System</span>
+          <span class="proj-date">COM2025</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Django</span><span class="tag">Python</span><span class="tag">Bootstrap</span><span class="tag">HTML</span>
+        </div>
+        <p class="proj-desc">A Django web application for managing a music catalogue, with a backend of models, views and URL routing for reliable data handling, and a Bootstrap-based interface for creating, viewing, editing and deleting albums and songs.</p>
+        <div class="proj-out"><span class="g">$ python manage.py runserver</span><br>CRUD: albums · songs</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Analytics System</span>
+          <span class="proj-date">COM1028</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Java</span><span class="tag">SQL</span><span class="tag">Agile</span>
+        </div>
+        <p class="proj-desc">Software Engineering coursework: a system providing both a data model and interface for an existing database, backed by proto-personas, user stories and scenarios documenting the requirements — an early exercise in Agile documentation and stakeholder communication.</p>
+        <div class="proj-out"><span class="g">$ java Analytics --source=db</span><br>docs: personas · user stories · scenarios</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Surrey Sports Park Management System</span>
+          <span class="proj-date">Oct – Nov 2022</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">PHP</span><span class="tag">SQL</span><span class="tag">JavaScript</span><span class="tag">MySQL</span>
+        </div>
+        <p class="proj-desc">A dynamic web system for managing the university's sports park — facility booking, staff management and operational oversight — with PHP and MySQL on the backend, driven by an Extended Entity Relationship Diagram for the database design.</p>
+        <div class="proj-out"><span class="g">$ php -S localhost:8000</span><br>modules: booking · staff · operations</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Forum Website</span>
+          <span class="proj-date">2021 – 2022</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">PHP</span><span class="tag">SQL</span><span class="tag">HTML</span><span class="tag">MAMP</span>
+        </div>
+        <p class="proj-desc">An early project building a Reddit-style forum from scratch — PHP handling authentication, posts, comments and voting server-side, SQL for relational data storage, and an interface closely mirroring Reddit's layout, developed and tested locally via MAMP.</p>
+        <div class="proj-out"><span class="g">$ php -S localhost:8888</span><br>features: auth · posts · comments · voting</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= SYSTEMS & LOW-LEVEL ================= -->
+  <div class="cat-panel" id="panel-systems">
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Credit Card Fraud Detection Engine</span>
+          <span class="proj-date">Apr 2025</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">C++</span><span class="tag">STL</span><span class="tag">Multithreading</span>
+        </div>
+        <p class="proj-desc">Independent project: a low-latency fraud detection engine analysing transaction streams for anomalous patterns. Implemented multithreaded ingestion pipelines for large-scale processing, applying clustering and regression techniques.</p>
+        <div class="proj-out"><span class="g">$ ./fraud_engine --stream=kaggle_txn</span><br>ingest: multithreaded · low-latency</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Segmented Memory Manager</span>
+          <span class="proj-date">May – Jun 2023</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Java</span><span class="tag">Operating Systems</span><span class="tag">Memory Management</span>
+        </div>
+        <p class="proj-desc">Operating Systems coursework: designed and implemented a segmented memory manager in Java to allocate and track programs and their segments in memory, working through allocation strategies and fragmentation handling.</p>
+        <div class="proj-out"><span class="g">$ java MemoryManager --mode=segmented</span><br>allocation: segment-based</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Morse Code Translator with Raspberry Pi</span>
+          <span class="proj-date">Oct – Nov 2022</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">ARM Assembly</span><span class="tag">Raspberry Pi</span><span class="tag">GPIO</span><span class="tag">Team Project</span>
+        </div>
+        <p class="proj-desc">Team project translating input into Morse code on a Raspberry Pi, programmed directly in ARM assembly language, with supplementary circuitry built from GPIO pins, a button and a segment display.</p>
+        <div class="proj-out"><span class="g">$ ./translate --input=morse</span><br>hardware: GPIO · button · segment display</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">Programming Fundamentals Coursework</span>
+          <span class="proj-date">Dec 2022 – Jan 2023</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Java</span><span class="tag">Git</span>
+        </div>
+        <p class="proj-desc">Early coursework applying core programming fundamentals in Java, with version control managed through Git from the outset — the first real exercise in structured, tracked development.</p>
+        <div class="proj-out"><span class="g">$ git log --oneline</span><br>fundamentals: syntax · control flow · OOP basics</div>
+        <div class="proj-link-row"><span class="status-badge"><span class="pulse"></span> N/A at this current time</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= AUTOMATION & TOOLS ================= -->
+  <div class="cat-panel" id="panel-automation">
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">YouTube Shorts Growth Automation</span>
+          <span class="proj-date">Aug 2024</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">YouTube Data API v3</span><span class="tag">Automation</span>
+        </div>
+        <p class="proj-desc">An end-to-end automation pipeline for YouTube Shorts — downloading and organising source clips, cleaning and SEO-tagging filenames, automating hashtags, shuffling upload order for variety, then bulk-uploading and scheduling posts via the YouTube Data API.</p>
+        <div class="proj-out"><span class="g">$ python automator.py --schedule=daily</span><br>pipeline: download → tag → shuffle → upload</div>
+        <div class="proj-link-row">
+          <a class="repo-link" href="https://github.com/natecode880/python-youtube-automator" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38l-.01-1.49c-2.22.48-2.69-1.07-2.69-1.07-.36-.92-.89-1.16-.89-1.16-.72-.5.06-.49.06-.49.8.06 1.22.82 1.22.82.71 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer>Nathan Delaportas © 2026</footer>
+
+</main>
+
+<script src="home.js"></script>
+<script src="projects.js"></script>
+<script src="jukebox.js"></script>
+
+</body>
+</html>
