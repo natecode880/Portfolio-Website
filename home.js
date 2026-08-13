@@ -11,7 +11,7 @@ PageInit.home = function () {
   const termBody = document.getElementById('termBody');
   const bootLines = [
     { type: 'cmd', text: 'whoami' },
-    { type: 'out', text: 'nathan_delaportas — quant-minded software engineer' },
+    { type: 'out', text: 'nathan_delaportas - aspiring developer' },
     { type: 'cmd', text: 'cat mission.txt' },
     { type: 'out', text: "MEng Computer Science (Surrey) -> MSc Computational Finance (KCL)" },
     { type: 'out', text: 'Curious about how things work, and I like building things that hold up.' },
