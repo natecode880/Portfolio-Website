@@ -14,7 +14,7 @@ PageInit.home = function () {
     { type: 'out', text: 'nathan_delaportas - aspiring developer' },
     { type: 'cmd', text: 'cat mission.txt' },
     { type: 'out', text: "MEng Computer Science (Surrey) -> MSc Computational Finance (KCL)" },
-    { type: 'out', text: 'Curious about how things work, and I like building things that hold up.' },
+    { type: 'out', text: 'Deeply interested in software engineering, and drawn to the development and research of quantitative finance.' },
     { type: 'cmd', text: './load_portfolio.sh' },
     { type: 'out', text: '[OK] about · education · experience · projects · skills · contact' },
   ];
