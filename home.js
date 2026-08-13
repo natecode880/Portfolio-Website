@@ -76,7 +76,7 @@ PageInit.home = function () {
 
   // ---------- Git log (experience) ----------
   const commits = [
-    { hash: 'e91a4c7', org: 'Synk', role: 'Machine Learning Engineering Intern', date: 'Jun 2026 – Aug 2026', desc: '' },
+    { hash: 'e91a4c7', org: 'Synk', role: 'Software Engineering Intern', date: 'Jun 2026 – Aug 2026', desc: '' },
     { hash: 'b40f218', org: 'Tutor Hunt', role: 'Mathematics Tutor', date: 'Apr 2025 – Present', desc: 'Delivered one-to-one A-Level tuition in Mathematics, Further Mathematics and Computer Science to over 120 students, adapting explanations to individual learning needs.' },
     { hash: 'c7d3a92', org: 'University of Surrey', role: 'PALS Peer Support Leader — Advanced Algorithms', date: 'Sep 2025 – Dec 2025', desc: 'Facilitated weekly Advanced Algorithms laboratory sessions, explaining algorithm design and complexity analysis while supporting structured technical problem-solving.' },
     { hash: '5f18b6a', org: 'NHR Automotive Ltd', role: 'Data Analyst Intern', date: 'Jun 2025 – Aug 2025', desc: 'Analysed vehicle sales, pricing trends and inventory turnover, developing KPI dashboards covering lead conversion, stock ageing and profit per vehicle.' },
